@@ -9,7 +9,7 @@
       "description": "Copy and adapt: Wails setup, Makefile, frontend structure, NavRail, global.css, store.js. Strip out what we don't need.",
       "type": "feature",
       "priority": "high",
-      "status": "new",
+      "status": "completed",
       "created": "2025-12-01T21:30:00+01:00"
     },
     {
@@ -18,7 +18,7 @@
       "description": "Go structs for Command/Group, read/write commands.json, config.json for data path. Simple adaption from commander's data layer.",
       "type": "feature",
       "priority": "high",
-      "status": "new",
+      "status": "completed",
       "created": "2025-12-01T21:30:00+01:00"
     },
     {
@@ -27,7 +27,7 @@
       "description": "NavRail with dynamic groups, GroupPage (like TasksList), CommandItem (like TaskItem), CommandForm for add/edit. Copy and adapt.",
       "type": "feature",
       "priority": "high",
-      "status": "new",
+      "status": "completed",
       "created": "2025-12-01T21:30:00+01:00"
     },
     {
@@ -36,8 +36,17 @@
       "description": "Modal to pick data location on first run. Settings page to change it later.",
       "type": "feature",
       "priority": "medium",
-      "status": "new",
+      "status": "completed",
       "created": "2025-12-01T21:30:00+01:00"
+    },
+    {
+      "id": 5,
+      "title": "UI enhancements",
+      "description": "Polish and refine the user interface",
+      "type": "feature",
+      "priority": "medium",
+      "status": "new",
+      "created": "2025-12-01T22:00:00+01:00"
     }
   ]
 }
