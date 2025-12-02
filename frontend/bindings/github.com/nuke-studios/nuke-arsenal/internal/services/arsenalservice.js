@@ -30,7 +30,7 @@ import * as $models from "./models.js";
  * @returns {$CancellablePromise<void>}
  */
 export function AddCommand(groupKey, cmd, description, output, note, tags) {
-    return $Call.ByID(2914892267, groupKey, cmd, description, output, note, tags);
+    return $Call.ByID(256387162, groupKey, cmd, description, output, note, tags);
 }
 
 /**
@@ -42,7 +42,7 @@ export function AddCommand(groupKey, cmd, description, output, note, tags) {
  * @returns {$CancellablePromise<void>}
  */
 export function AddGroup(key, name, icon, description) {
-    return $Call.ByID(4096155277, key, name, icon, description);
+    return $Call.ByID(3025731396, key, name, icon, description);
 }
 
 /**
@@ -52,7 +52,7 @@ export function AddGroup(key, name, icon, description) {
  * @returns {$CancellablePromise<void>}
  */
 export function DeleteCommand(groupKey, id) {
-    return $Call.ByID(1460250133, groupKey, id);
+    return $Call.ByID(3530698566, groupKey, id);
 }
 
 /**
@@ -61,7 +61,7 @@ export function DeleteCommand(groupKey, id) {
  * @returns {$CancellablePromise<void>}
  */
 export function DeleteGroup(key) {
-    return $Call.ByID(3216577103, key);
+    return $Call.ByID(3644789376, key);
 }
 
 /**
@@ -69,7 +69,7 @@ export function DeleteGroup(key) {
  * @returns {$CancellablePromise<models$0.CommandsFile | null>}
  */
 export function GetCommands() {
-    return $Call.ByID(694388991).then(/** @type {($result: any) => any} */(($result) => {
+    return $Call.ByID(2342818264).then(/** @type {($result: any) => any} */(($result) => {
         return $$createType1($result);
     }));
 }
@@ -79,7 +79,7 @@ export function GetCommands() {
  * @returns {$CancellablePromise<models$0.Config | null>}
  */
 export function GetConfig() {
-    return $Call.ByID(2408235115).then(/** @type {($result: any) => any} */(($result) => {
+    return $Call.ByID(3982408388).then(/** @type {($result: any) => any} */(($result) => {
         return $$createType3($result);
     }));
 }
@@ -89,7 +89,7 @@ export function GetConfig() {
  * @returns {$CancellablePromise<{ [_: string]: models$0.Group }>}
  */
 export function GetGroups() {
-    return $Call.ByID(2586710137).then(/** @type {($result: any) => any} */(($result) => {
+    return $Call.ByID(885530442).then(/** @type {($result: any) => any} */(($result) => {
         return $$createType5($result);
     }));
 }
@@ -99,7 +99,7 @@ export function GetGroups() {
  * @returns {$CancellablePromise<boolean>}
  */
 export function HasConfig() {
-    return $Call.ByID(3535615407);
+    return $Call.ByID(2901902536);
 }
 
 /**
@@ -108,7 +108,7 @@ export function HasConfig() {
  * @returns {$CancellablePromise<string>}
  */
 export function InitializeDefault() {
-    return $Call.ByID(2686057934);
+    return $Call.ByID(3826994121);
 }
 
 /**
@@ -117,7 +117,7 @@ export function InitializeDefault() {
  * @returns {$CancellablePromise<$models.SearchResult[]>}
  */
 export function Search(query) {
-    return $Call.ByID(2444019599, query).then(/** @type {($result: any) => any} */(($result) => {
+    return $Call.ByID(1558530350, query).then(/** @type {($result: any) => any} */(($result) => {
         return $$createType7($result);
     }));
 }
@@ -128,7 +128,7 @@ export function Search(query) {
  * @returns {$CancellablePromise<void>}
  */
 export function SetDataPath(path) {
-    return $Call.ByID(2313679926, path);
+    return $Call.ByID(1360559213, path);
 }
 
 /**
@@ -143,7 +143,7 @@ export function SetDataPath(path) {
  * @returns {$CancellablePromise<void>}
  */
 export function UpdateCommand(groupKey, id, cmd, description, output, note, tags) {
-    return $Call.ByID(2602717567, groupKey, id, cmd, description, output, note, tags);
+    return $Call.ByID(1335679668, groupKey, id, cmd, description, output, note, tags);
 }
 
 // Private type creation functions
