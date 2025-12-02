@@ -2,7 +2,7 @@
   "_meta": {
     "purpose": "Project identity and purpose"
   },
-  "name": "nuke-arsenal",
+  "name": "Nuke Arsenal",
   "type": "desktop",
   "tagline": "Personal command knowledge base",
   "problem": "Terminal commands get lost in shell history - no context, no notes, no way to search by intent. Constantly forgetting commands across macOS, Docker, Node, Angular, project-specific tools.",

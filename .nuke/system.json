@@ -6,34 +6,86 @@
     "root": ".",
     "folders": [
       "/.claude",
-      "/.idea",
-      "/.idea/codeStyles",
+      "/",
       "/.nuke",
-      "/"
+      "/frontend/bindings/github.com/c-heer/nuke-arsenal/internal/models",
+      "/frontend/bindings/github.com/c-heer/nuke-arsenal/internal/services",
+      "/frontend/bindings/github.com/wailsapp/wails/v3/internal",
+      "/frontend/bindings/time",
+      "/frontend",
+      "/frontend/src",
+      "/frontend/src/components",
+      "/internal/data",
+      "/internal/models",
+      "/internal/services"
     ],
     "files": {
       "/": [
-        "DESIGN.md"
+        ".gitignore",
+        "Makefile",
+        "go.mod",
+        "go.sum"
       ],
       "/.claude": [
         "CLAUDE.md"
-      ],
-      "/.idea": [
-        ".gitignore",
-        "modules.xml",
-        "nuke-arsenal.iml",
-        "vcs.xml"
-      ],
-      "/.idea/codeStyles": [
-        "codeStyleConfig.xml"
       ],
       "/.nuke": [
         "guidelines.json",
         "project.json",
         "system.json",
         "tasks.json"
+      ],
+      "/frontend": [
+        "embed.go",
+        "index.html",
+        "package-lock.json",
+        "package.json",
+        "svelte.config.js",
+        "vite.config.js"
+      ],
+      "/frontend/bindings/github.com/c-heer/nuke-arsenal/internal/models": [
+        "index.js",
+        "models.js"
+      ],
+      "/frontend/bindings/github.com/c-heer/nuke-arsenal/internal/services": [
+        "arsenalservice.js",
+        "index.js",
+        "models.js"
+      ],
+      "/frontend/bindings/github.com/wailsapp/wails/v3/internal": [
+        "eventcreate.js",
+        "eventdata.d.ts"
+      ],
+      "/frontend/bindings/time": [
+        "index.js",
+        "models.js"
+      ],
+      "/frontend/src": [
+        "App.svelte",
+        "global.css",
+        "main.js",
+        "store.js"
+      ],
+      "/frontend/src/components": [
+        "CommandItem.svelte",
+        "Dashboard.svelte",
+        "GroupPage.svelte",
+        "NavRail.svelte",
+        "Settings.svelte"
+      ],
+      "/internal/data": [
+        "commands.go",
+        "config.go",
+        "directories.go"
+      ],
+      "/internal/models": [
+        "types.go"
+      ],
+      "/internal/services": [
+        "arsenal_service.go"
       ]
     }
   },
-  "last_updated": "2025-12-01T20:59:35+01:00"
+  "last_updated": "2025-12-02T08:54:49+01:00",
+  "git_branch": "main"
 }

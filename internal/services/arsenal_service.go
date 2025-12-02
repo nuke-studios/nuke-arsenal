@@ -40,6 +40,50 @@ func (s *ArsenalService) SetDataPath(path string) error {
 	return nil
 }
 
+// InitializeDefault sets up ~/.nuke-arsenal with default data if no config exists
+// Returns the data path (existing or newly created)
+func (s *ArsenalService) InitializeDefault() (string, error) {
+	// If config already exists, just return the existing path
+	if data.HasConfig() {
+		config, err := data.ReadConfig()
+		if err != nil {
+			return "", err
+		}
+		s.dataPath = config.DataPath
+		return config.DataPath, nil
+	}
+
+	// Get default path ~/.nuke-arsenal/commands.json
+	defaultPath, err := data.GetDefaultDataPath()
+	if err != nil {
+		return "", err
+	}
+
+	// Ensure the directory exists
+	if err := data.EnsureDataDir(defaultPath); err != nil {
+		return "", err
+	}
+
+	// Create empty commands.json if it doesn't exist
+	_, err = data.ReadCommands(defaultPath)
+	if err != nil {
+		// File doesn't exist, create default structure
+		defaultCommands := &models.CommandsFile{
+			Groups: map[string]models.Group{},
+		}
+		if err := data.WriteCommands(defaultPath, defaultCommands); err != nil {
+			return "", err
+		}
+	}
+
+	// Save config pointing to this path
+	if err := s.SetDataPath(defaultPath); err != nil {
+		return "", err
+	}
+
+	return defaultPath, nil
+}
+
 // --- Commands ---
 
 func (s *ArsenalService) ensureDataPath() error {

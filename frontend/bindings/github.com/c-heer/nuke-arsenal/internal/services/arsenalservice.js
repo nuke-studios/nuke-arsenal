@@ -103,6 +103,15 @@ export function HasConfig() {
 }
 
 /**
+ * InitializeDefault sets up ~/.nuke-arsenal with default data if no config exists
+ * Returns the data path (existing or newly created)
+ * @returns {$CancellablePromise<string>}
+ */
+export function InitializeDefault() {
+    return $Call.ByID(2686057934);
+}
+
+/**
  * Search searches across all groups
  * @param {string} query
  * @returns {$CancellablePromise<$models.SearchResult[]>}

@@ -4,9 +4,21 @@
     import Dashboard from "./components/Dashboard.svelte";
     import GroupPage from "./components/GroupPage.svelte";
     import Settings from "./components/Settings.svelte";
+    import { InitializeDefault } from "../bindings/github.com/c-heer/nuke-arsenal/internal/services/arsenalservice.js";
 
     let currentPage = $state('dashboard');
     let currentGroup = $state(null);
+    let initialized = $state(false);
+
+    onMount(async () => {
+        // Auto-initialize ~/.nuke-arsenal on first launch
+        try {
+            await InitializeDefault();
+        } catch (err) {
+            console.error('Failed to initialize:', err);
+        }
+        initialized = true;
+    });
 
     function navigate(page, groupKey = null) {
         currentPage = page;

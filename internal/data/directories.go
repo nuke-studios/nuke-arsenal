@@ -14,6 +14,24 @@ func GetConfigDir() (string, error) {
 	return filepath.Join(home, ".config", "arsenal"), nil
 }
 
+// GetDefaultDataDir returns ~/.nuke-arsenal
+func GetDefaultDataDir() (string, error) {
+	home, err := os.UserHomeDir()
+	if err != nil {
+		return "", err
+	}
+	return filepath.Join(home, ".nuke-arsenal"), nil
+}
+
+// GetDefaultDataPath returns ~/.nuke-arsenal/commands.json
+func GetDefaultDataPath() (string, error) {
+	dir, err := GetDefaultDataDir()
+	if err != nil {
+		return "", err
+	}
+	return filepath.Join(dir, "commands.json"), nil
+}
+
 // GetConfigPath returns path to config.json
 func GetConfigPath() (string, error) {
 	dir, err := GetConfigDir()
